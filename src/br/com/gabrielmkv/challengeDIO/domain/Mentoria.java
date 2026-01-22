@@ -13,18 +13,26 @@ public class Mentoria extends Conteudo{
 
     public Mentoria(String titulo, String descricao, LocalDate data) {
         super(titulo, descricao);
-        this.data = data;
+        setData(data);
     }
 
     public LocalDate getData() {
         return data;
     }
     public void setData(LocalDate data) {
-        this.data = data;
+        if (data.isAfter(LocalDate.now()) || data.isEqual(LocalDate.now())) {
+            this.data = data;
+        } else {
+            System.err.println("Data inválida!");
+        }
     }
 
     @Override
     public String toString() {
-        return "Mentoria [titulo=" + getTitulo() + ", descricao=" + getDescricao() + ", data=" + data + "]";
+        return "Mentoria {\n" +
+            "  titulo='" + getTitulo() + "',\n" +
+            "  descricao='" + getDescricao() + "',\n" +
+            "  data=" + data + "\n" +
+            "}";
     }
 }

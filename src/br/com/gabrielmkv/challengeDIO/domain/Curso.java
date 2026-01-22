@@ -3,15 +3,17 @@ package br.com.gabrielmkv.challengeDIO.domain;
 public class Curso extends Conteudo {
     
     private int cargaHoraria;
+    private int nivelDificuldade;
 
     @Override
     public double calcularXP(){
-        return XP_PADRAO * cargaHoraria;
+        return XP_PADRAO * (cargaHoraria * nivelDificuldade);
     }
 
-    public Curso(String titulo, String descricao, int cargaHoraria) {
+    public Curso(String titulo, String descricao, int cargaHoraria, int nivelDificuldade) {
         super(titulo, descricao);
         setCargaHoraria(cargaHoraria);
+        setNivelDificuldade(nivelDificuldade);
     }
 
     public int getCargaHoraria() {
@@ -23,9 +25,25 @@ public class Curso extends Conteudo {
         } 
     }
 
+    public int getNivelDificuldade() {
+        return nivelDificuldade;
+    }
+    public void setNivelDificuldade(int nivelDificuldade) {
+        if (nivelDificuldade >= 1 || nivelDificuldade <= 3)
+            this.nivelDificuldade = nivelDificuldade;
+        else {
+            System.err.println("Nível de dificuldade inválido!");
+        }
+    }
+
     @Override
     public String toString() {
-        return "Curso [titulo=" + getTitulo() + ", descricao=" + getDescricao() + ", cargaHoraria=" + cargaHoraria + "]";
-    }  
+        return "Curso {\n" +
+            "  titulo='" + getTitulo() + "',\n" +
+            "  descricao='" + getDescricao() + "',\n" +
+            "  carga_horaria=" + cargaHoraria + "\n" +
+            "  nivel_dificuldade=" + nivelDificuldade + "\n" +
+            "}";
+    }
 
 }
