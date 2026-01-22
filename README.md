@@ -73,20 +73,20 @@ Possibilita que objetos sejam referenciados de diferentes formas, permitindo tra
 
 ```text
 .
+├── README.md
 └── src
-    ├── br
-    │   └── com
-    │       └── gabrielmkv
-    │           └── challengeDIO
-    │               ├── app
-    │               │   └── Main.java             // Classe principal para execução do projeto
-    │               └── domain
-    │                   ├── Bootcamp.java         // Representa o bootcamp
-    │                   ├── Conteudo.java         // Classe abstrata base
-    │                   ├── Curso.java            // Conteúdo do tipo curso
-    │                   ├── Dev.java              // Representa o aluno do bootcamp
-    │                   └── Mentoria.java         // Conteúdo do tipo mentoria
-    └── README.md
+    └── br
+        └── com
+            └── gabrielmkv
+                └── challengeDIO
+                    ├── app
+                    │   └── Main.java             // Classe principal para execução do projeto
+                    └── domain
+                        ├── Bootcamp.java         // Representa o bootcamp
+                        ├── Conteudo.java         // Classe abstrata base
+                        ├── Curso.java            // Conteúdo do tipo curso
+                        ├── Dev.java              // Representa o aluno do bootcamp
+                        └── Mentoria.java         // Conteúdo do tipo mentoria
 ```
 
 ## ⭐ Créditos
