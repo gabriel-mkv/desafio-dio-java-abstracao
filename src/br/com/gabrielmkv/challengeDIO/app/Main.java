@@ -1,4 +1,4 @@
-package br.com.gabrielmkv.challengeDIO;
+package br.com.gabrielmkv.challengeDIO.app;
 
 public class Main {
     

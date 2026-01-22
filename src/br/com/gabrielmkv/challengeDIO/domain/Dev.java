@@ -1,4 +1,4 @@
-package br.com.gabrielmkv.challengeDIO;
+package br.com.gabrielmkv.challengeDIO.domain;
 
 import java.util.LinkedHashSet;
 import java.util.Optional;
