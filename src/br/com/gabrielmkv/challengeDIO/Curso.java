@@ -9,11 +9,18 @@ public class Curso extends Conteudo {
         return XP_PADRAO * cargaHoraria;
     }
 
+    public Curso(String titulo, String descricao, int cargaHoraria) {
+        super(titulo, descricao);
+        setCargaHoraria(cargaHoraria);
+    }
+
     public int getCargaHoraria() {
         return cargaHoraria;
     }
     public void setCargaHoraria(int cargaHoraria) {
-        this.cargaHoraria = cargaHoraria;
+        if (cargaHoraria > 0 && cargaHoraria < 10) {
+            this.cargaHoraria = cargaHoraria;
+        } 
     }
 
     @Override
